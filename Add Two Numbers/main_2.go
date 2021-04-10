@@ -6,8 +6,8 @@
  * }
  */
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-  var buffListNode = &ListNode{}
-	var currListNode = buffListNode
+  var ListNode = &ListNode{}
+	var currListNode = ListNode
 	var carry int = 0
 	var p, q *ListNode = l1, l2
 	for p != nil || q != nil {
@@ -32,5 +32,5 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	if carry > 0 {
 		currListNode.Next = &ListNode{carry, nil}
 	}
-	return buffListNode.Next
+	return ListNode.Next
 }
