@@ -43,13 +43,13 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		return list
 	}
 	var arrayInListNode = func(list []int) *ListNode {
-		var buffListNode = &ListNode{}
-		var currListNode = buffListNode
+		var ListNode = &ListNode{}
+		var currListNode = ListNode
 		for _, v := range list {
 			currListNode.Next = &ListNode{v, nil}
 			currListNode = currListNode.Next
 		}
-		return buffListNode.Next
+		return ListNode.Next
 	}
 	return arrayInListNode(summElements(readListNode(l1), readListNode(l2)))
 }
